@@ -1,0 +1,212 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Verdana', Arial, Tahoma;
+  font-size: 14px;
+  color: #000;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.over_hidden {
+  overflow: hidden;
+}
+
+.border_teste {
+  border: 2px solid #000
+}
+
+.overflow-hidden {
+  overflow: hidden
+}
+
+
+img {
+  border: 0
+}
+
+strong {
+  font-weight: bolder;
+}
+
+/*-------------------------------
+animate geral
+--------------------------------*/
+
+
+.backInUp {
+  -webkit-animation: backInUp 1.5s;
+  animation: backInUp 1.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+.zoomIn {animation: zoomIn 2s 1 alternate;}
+
+.zoomIn2 {animation: zoomIn 4s 1 alternate;}
+
+.zoomOut {animation: zoomOut 2s 1 alternate;}
+
+
+ .pulse1 { animation: backInUp 1s 1 alternate;}
+
+ .fadeIn {   animation: fadeIn 2s ease-in-out; }
+
+
+
+/*--------------------------------------------------------
+    banner
+--------------------------------------------------------*/
+.desk_none {display: none !important;}
+.mob_none {display: block !important;}
+
+
+/*--------------------------------------------------------
+    franquia
+--------------------------------------------------------*/
+
+.disney-franquia-btn {
+    width: 100%;
+    
+    color:  #fff;
+    min-height: 30px;
+    line-height: 30px;
+    font-size: 10px;
+    background: #363636;
+    position: relative;
+    display: inline-block;
+    border-radius: 30px;
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #363636 inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+
+  .disney-franquia-btn::before {
+      content:  "PRODUTOS ";
+  }
+
+  .disney-franquia-btn::after {
+    content:  ">";
+    font-size: 12px;
+    font-weight: bolder;
+    position: absolute;
+    right: 5%;
+  }
+  .disney-franquia-btn:hover {
+    /*color: #363636;
+    background: #d1c8c8;*/
+      box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+
+  }
+
+
+/*--------------------------------------------------------
+    CATEGORIA
+--------------------------------------------------------*/
+
+.disney-categ-btn {
+  width: 160px;
+  height: 30px;
+  position: absolute;
+  bottom: 9%;
+  border:  2px solid #fff;
+  border-radius: 50px;
+  left: 50%;
+  line-height: 25px;
+  transform: translateX(-50%);
+  color:  #fff;
+  box-shadow: 0 0 40px 40px #363636 inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.disney-categ-btn:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.img-border-20 {
+  border-radius: 20px;
+}
+
+ /*--------------------------------------------------------
+    MOBILE
+--------------------------------------------------------*/
+
+
+@media (max-width: 960px){
+.disney-franquia-btn {
+    width: 98%;
+  }
+
+  .disney-franquia-btn::after {
+    font-size: 10px;
+        position: relative;
+        right: 0;
+
+  }
+
+   .disney-franquia-btn::before {
+      content: none;
+  }
+
+  .disney-categ-btn {
+    width: 70% !important;
+    font-size: 10px;
+    bottom: 5%;
+    height: 24px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 425px){
+  .desk_none {display: block !important;}
+  .mob_none {display: none !important;}
+}
+ 
+
+
+#myBtn {
+  display: none;
+}
+
+/*-------------------------------
+goto top up width 1000px 
+--------------------------------*/
+
+@media (min-width: 1200px){
+
+  /* btn top */
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px ;
+    border-radius: 50px;
+    opacity: 0.5;
+  }
+  #myBtn:hover {    
+    opacity: 1;
+
+  }
+
+}
